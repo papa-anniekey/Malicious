@@ -1,0 +1,11 @@
+rule XiangXiang_flash_2018_4878 {  
+      strings:  
+          $00 = "rundll32" nocase wide ascii
+          $01 = "kernel32.dll" nocase wide ascii
+          $a = "C:\\Users\\Miha\\AdobeMinePoC" nocase wide ascii
+          $b = "UAFGenerator" nocase wide ascii
+          $c = "shellcodBytes" nocase wide ascii  
+          $d = "DRM_obj" nocase wide ascii  
+      condition:  
+      ($00 or $01) and ($a or $b or $c or $d)
+  }
