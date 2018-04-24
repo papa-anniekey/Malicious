@@ -1,0 +1,7 @@
+shodan cheet sheet
+
+
+http.title:"words"  HTTP Title search
+org:"org name"  org search
+http.component:"words"  HTTP component search. i.e. http.component:"drupal"
+product:"" Product search
