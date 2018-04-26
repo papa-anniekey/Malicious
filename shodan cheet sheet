@@ -2,6 +2,8 @@ shodan cheet sheet
 
 
 http.title:"words"  HTTP Title search
+http:"words" http source code search like i.e. html:"cfg.smt.docomo.ne.jp" html:"id.my.softbank.jp"
 org:"org name"  org search
 http.component:"words"  HTTP component search. i.e. http.component:"drupal"
 product:"" Product search
+
