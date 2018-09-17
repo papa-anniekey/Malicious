@@ -1,7 +1,8 @@
-#!/usr/bin/python3
+#!/usr/local/bin/python3
 
 from datetime import datetime, date, timedelta
 import urllib.request
+import zipfile
 
 today = datetime.today()
 yesterday = today - timedelta(days=1)
@@ -13,3 +14,10 @@ opener = urllib.request.build_opener()
 opener.addheaders = [('User-agent', 'Mozilla/5.0 (Windows NT 6.2; Trident/7.0; rv:11.0) like Gecko')]
 urllib.request.install_opener(opener)
 urllib.request.urlretrieve(URL , yesterday + '.zip')
+
+temp = yesterday + '.zip'
+
+zip = zipfile.ZipFile(temp)
+zip.extractall(yesterday)
+zip.close()
+
